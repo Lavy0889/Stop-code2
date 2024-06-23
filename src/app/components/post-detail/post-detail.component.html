@@ -1,0 +1,20 @@
+<div class="col" *ngIf="post">
+    <div class="card">
+      
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ post.title }}
+        </h5>
+        <p class="card-text"> {{ post.category }}</p>
+<p class="card-text">Data pubblicazione {{post.date |date}}</p>
+<div class="card-text">{{post.body}}
+
+</div>
+        
+        <button class="btn btn-primary mt-2" (click)="ps.aggiungiAiPreferiti(post)"> Aggiungi ai preferiti</button>
+
+    
+     
+      </div>
+    </div>
+  </div>

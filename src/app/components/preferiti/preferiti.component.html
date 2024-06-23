@@ -1,0 +1,21 @@
+<ul class="list-group" *ngIf="postService.ListaPosts.length > 0">
+  
+    <li
+    *ngFor="let p of postService.ListaPosts"
+    class="list-group-item"
+  >
+    <button
+      class="btn btn-danger"
+      (click)="postService.rimuoviDaiPreferiti(p.id)"
+    >
+      <i class="bi bi-x"></i>
+    </button>
+    {{ p.title }}
+  </li>
+
+  <div class="container full-height d-flex justify-content-center align-items-center">
+    <button class="btn btn-danger "  (click)="postService.pulisciLista()">
+      <i class="bi bi-x-circle"></i> Svuota
+    </button>
+  </div>
+</ul>
